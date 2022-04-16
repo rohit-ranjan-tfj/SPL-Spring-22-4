@@ -1,0 +1,11 @@
+library: llist.o stack.o queue.o heap.o union_find.o
+	gcc llist.o stack.o queue.o heap.o union_find.o -shared -o libassgn3.so
+	sudo cp libassgn3.so /usr/local/lib/
+
+union_find.o: union_find.h node.h
+heap.o: heap.h 
+queue.o: queue.h llist.h node.h
+stack.o: stack.h llist.h node.h
+llist.o: llist.h node.h 
+clean:
+	sudo rm llist.o stack.o queue.o heap.o union_find.o libassgn3.so

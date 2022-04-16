@@ -1,0 +1,7 @@
+library: graph.o
+	ar rcs libassgn3g.a graph.o
+	sudo cp libassgn3g.a /usr/local/lib/
+
+graph.o: graph.h llist.h stack.h queue.h union_find.h node.h
+clean:
+	sudo rm graph.o libassgn3g.a

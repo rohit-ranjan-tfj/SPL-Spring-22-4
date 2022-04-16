@@ -1,0 +1,6 @@
+graph.out: graph.h
+	export LD_LIBRARY_PATH=/usr/local/lib
+	gcc -w main.c -lassgn3g -lassgn3 -o graph.out
+	
+clean:
+	sudo rm graph.out
